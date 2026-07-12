@@ -1,0 +1,7 @@
+{
+  "name": "t6-db-schema",
+  "private": true,
+  "devDependencies": {
+    "prisma": "^5.20.0"
+  }
+}

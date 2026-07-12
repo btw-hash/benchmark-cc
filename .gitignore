@@ -1,0 +1,35 @@
+node_modules/
+runs/*/
+!runs/.gitkeep
+*.log
+.env
+.env.*
+setups/*/.claude/projects/
+setups/*/.claude/todos/
+setups/*/.claude/shell-snapshots/
+setups/*/.claude/statsig/
+setups/*/.claude/ide/
+setups/*/.claude/*.json.backup
+setups/*/.claude/local/
+setups/*/.claude/__store.db*
+# Personal setup slots — gitignored by default. Each runner can opt in
+# via `./bootstrap-personal.ps1 -Runner <name> -Commit` which uses git add -f.
+setups/G_*_personal/
+setups/*/.claude/.credentials.json
+setups/*/.claude/.claude.json
+setups/*/.claude/backups/
+setups/*/.claude/sessions/
+setups/*/.claude/file-history/
+setups/*/.claude/session-env/
+setups/*/.claude/cache/
+setups/*/.claude/.cache/
+setups/*/.claude/.last-cleanup
+setups/*/.claude/mcp-needs-auth-cache.json
+# Judge runtime state — judge.mjs regenerates this dir (and copies live
+# credentials into it), so the whole thing must never be tracked.
+.judge-config/
+
+# never track Claude credentials or per-user CC state
+**/.claude/.credentials.json
+**/.claude/.claude.json
+**/.claude/mcp-needs-auth-cache.json

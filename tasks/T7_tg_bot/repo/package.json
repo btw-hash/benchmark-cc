@@ -1,0 +1,15 @@
+{
+  "name": "t7-tg-bot",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "grammy": "^1.30.0"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.0",
+    "typescript": "^5.4.0"
+  }
+}

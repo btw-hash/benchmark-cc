@@ -1,0 +1,14 @@
+{
+  "_comment": "Setup E — full stack: CLAUDE.md + generic agents + generic skills + secrets-scan hook.",
+  "model": "claude-opus-4-7",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          { "type": "command", "command": "bash \"${CLAUDE_PROJECT_DIR}/.claude/hooks/secrets-scan.sh\"" }
+        ]
+      }
+    ]
+  }
+}

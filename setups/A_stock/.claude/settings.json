@@ -1,0 +1,4 @@
+{
+  "_comment": "Setup A — stock baseline. Empty config, no CLAUDE.md, no agents/skills/hooks/memory.",
+  "model": "claude-opus-4-7"
+}

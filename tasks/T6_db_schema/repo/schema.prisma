@@ -1,0 +1,19 @@
+// Prisma schema for a small blog application.
+// We need to add a Post model and link it to User.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  // TODO: add `posts Post[]` once Post model exists
+}
