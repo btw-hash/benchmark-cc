@@ -2,6 +2,21 @@
 
 A/B testing harness for Claude Code configurations. Compares 5 generic setups across 5 isolated tasks, measuring tokens, wall-time, tool usage, and quality (LLM-judged).
 
+## Results at a glance
+
+One runner, 7 setups, 13 tasks, 390 runs. Full tables: [report.md](report.md).
+
+| Setup | Avg quality (/10) | Pass rate | Avg time (s) | Avg cost ($) |
+|---|---|---|---|---|
+| `A_stock` (no config) | 9.44 | 60/65 | 54.3 | 0.25 |
+| `B_md` (CLAUDE.md only) | 9.53 | 60/65 | 51.0 | 0.26 |
+| `E_full` (public best practice) | 9.45 | 60/65 | 51.4 | 0.27 |
+| `G_alice_personal` (a real personal setup) | 9.50 | 55/55 | 62.8 | 0.30 |
+
+On isolated coding tasks the configuration layers moved judged quality by less than
+0.1 points. The personal setup passed all of its runs and cost about 20% more per run
+than the empty baseline.
+
 **Goal:** measure what each *layer* of `~/.claude/` configuration contributes — CLAUDE.md, agents, skills, hooks — on identical tasks, with no personal/project content. Results are reproducible across machines.
 
 ## Setups
